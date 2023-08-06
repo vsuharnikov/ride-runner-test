@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites time="15.682687">
+    <testsuite name="tests" time="9.076816">
+        <testcase name="all-functions" file="tests/all-functions.test.conf" time="2.470945"/>
+        <testsuite name="simple" time="6.605871">
+            <testcase name="waves-balance" file="tests/simple/waves-balance.test.conf" time="6.605871"/>
+<!--
+            <testcase name="example2-" classname="example2-4" time="0.982">
+                <failure message="Assertion error message" type="AssertionError">
+                    &lt;!&ndash; Call stack printed here &ndash;&gt;
+                </failure>
+            </testcase>
+-->
+        </testsuite>
+    </testsuite>
+</testsuites>
