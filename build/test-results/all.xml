@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites time="15.682687">
     <testsuite name="tests" time="9.076816">
-        <testcase name="all-functions" file="tests/all-functions.test.conf" time="2.470945"/>
+        <testcase file="tests/all-functions.test.conf" time="2.470945"/>
         <testsuite name="simple" time="7.805871">
-            <testcase name="waves-balance-failure" file="tests/simple/waves-balance-failure.test.conf" time="6.605871">
+            <testcase file="tests/simple/waves-balance-failure.test.conf" time="6.605871">
                 <system-out>Data written to standard out.</system-out>
                 <failure message="Expected value did not match" type="AssertionError">
                     Expected:
@@ -12,10 +12,10 @@
                       {"regular": 200}
                 </failure>
             </testcase>
-            <testcase name="waves-balance-error" file="tests/simple/waves-balance-error.test.conf" time="1.2">
-                <failure message="Expected value did not match" type="AssertionError">
+            <testcase file="tests/simple/waves-balance-error.test.conf" time="1.2">
+                <error message="Expected value did not match" type="AssertionError">
                     Can't parse: error message.
-                </failure>
+                </error>
                 <system-err>Data written to standard error.</system-err>
             </testcase>
         </testsuite>
