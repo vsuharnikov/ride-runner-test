@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read # if you wonder as I am (WTF): https://github.com/actions/checkout/issues/254#issuecomment-1632353441
-  packages: write
+  contents: read # WTF 1: https://github.com/actions/checkout/issues/254#issuecomment-1632353441
+  checks: write # WTF 2: https://github.com/mikepenz/action-junit-report/issues/23#issuecomment-1412597753
+  id-token: write
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
