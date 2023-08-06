@@ -3,9 +3,8 @@ name: build
 on:
   workflow_dispatch:
 
-# https://github.com/marketplace/actions/junit-report-action#user-content-pr-run-permissions
 permissions:
-  contents: read
+  contents: read # if you wonder as I am (WTF): https://github.com/actions/checkout/issues/254#issuecomment-1632353441
   packages: write
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -24,9 +23,16 @@ jobs:
       # - name: Run a one-line script
       #  run: echo Hello, world!
 
-      - name: Upload Test Report
-        uses: actions/upload-artifact@v3
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v3
         with:
-          name: junit-test-results
-          path: '**/build/test-results/all.xml'
-          retention-days: 1
+          commit: ${{github.event.workflow_run.head_sha}}
+          report_paths: '**/build/test-results/test/all.xml'
+
+#      - name: Upload Test Report
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: junit-test-results
+#          path: '**/build/test-results/all.xml'
+#          retention-days: 1
+
