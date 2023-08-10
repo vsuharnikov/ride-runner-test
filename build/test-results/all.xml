@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites time="15.682687">
-    <testsuite name="tests" time="9.076816">
-        <testcase name="" file="tests/all-functions.test.conf" time="2.470945"/>
-        <testsuite name="simple" time="7.805871">
-            <testcase name="" file="tests/simple/waves-balance-failure.test.conf" time="6.605871">
-                <system-out>Data written to standard out.</system-out>
-                <failure message="Expected value did not match" type="AssertionError">
-                    Expected:
-                      {"regular": 100}
-                    Actual:
-                      {"regular": 200}
-                </failure>
-            </testcase>
-            <testcase name="" file="tests/simple/waves-balance-error.test.conf" time="1.2">
-                <error message="Can't parse test" type="ParseError">
-                    Can't parse: error message.
-                </error>
-                <system-err>Data written to standard error.</system-err>
-            </testcase>
-        </testsuite>
-    </testsuite>
+<testsuites time="2.953">
+  <testsuite name="." time="2.953">
+    <testcase name="" file="sample-input.conf" time="1.907">
+      <system-out><![CDATA[succeeded: "9007199361531056" ]]></system-out>
+    </testcase>
+    <testcase name="" file="application.conf" time="1.045">
+      <error 
+      message="Wrong chain id: {&quot;obj&quot;:[{&quot;msg&quot;:[&quot;'chainId' is undefined on object: {\&quot;waves\&quot;:{\&quot;blockchain\&quot;:{\&quot;custom\&quot;:{\&quot;address-sch..." type="IllegalArgumentException">
+        <![CDATA[java.lang.IllegalArgumentException: Wrong chain id: {"obj":[{"msg":["'chainId' is undefined on object: {\"waves\":{\"blockchain\":{\"custom\":{\"address-scheme-character\":\"N\",\"functionality\":{\"block-version-3-after-height\":0,\"blocks-for-feature-activation\":4,\"double-features-periods-after-height\":1000000000,\"feature-check-blocks-period\":5,\"generation-balance-depth-from-50-to-1000-after-height\":0,\"last-time-based-fork-parameter\":1492128000000,\"lease-expiration\":1000000,\"max-transaction-time-back-offset\":\"120m\",\"max-transaction-time-forward-offset\":\"90m\",\"min-asset-info-update-interval\":7,\"pre-activated-features\":{\"1\":0,\"2\":0,\"3\":0,\"4\":0,\"5\":0,\"6\":0,\"7\":0,\"8\":0,\"9\":0,\"10\":0,\"11\":0,\"12\":0,\"13\":0,\"14\":0,\"15\":0},\"reset-effective-balances-at-height\":4650},\"genesis\":{\"average-block-delay\":\"60000ms\",\"block-timestamp\":1672298547858,\"initial-balance\":10000000000000000,\"initial-base-target\":44,\"signature\":\"2ZBESCwYgqq4sBtGFMviZeAgEnUZpDZBF3qQpkfWho1RW34CfYqbPLNGUs12Vrck3EDjqY6egZHDEoRLuSyFjaWb\",\"timestamp\":1672298547858,\"transactions\":[{\"amount\":2053000000000000,\"recipient\":\"3KmW6DnYpwccAEHC3CGB1FiY59BU6N8MSbP\"},{\"amount\":3732000000000000,\"recipient\":\"3KcDhcG5c7DdwHjSxUxBubMmUtKhYv3rMT1\"},{\"amount\":4215000000000000,\"recipient\":\"3KmbeREJAQmP5ThNMCiDmk3JSKPsH6VqPzs\"}]},\"rewards\":{\"initial\":600000000,\"min-increment\":50000000,\"term\":100000,\"term-after-capped-reward-feature\":10000,\"voting-interval\":10000}},\"type\":\"CUSTOM\"}}}"],"args":[]}]}
+	at com.wavesplatform.ride.runner.input.RideRunnerInputParser$.getChainId(RideRunnerInputParser.scala:196)
+	at com.wavesplatform.ride.runner.entrypoints.WavesRideRunnerWithPreparedStateApp$.run(WavesRideRunnerWithPreparedStateApp.scala:83)
+	at com.wavesplatform.ride.runner.entrypoints.WavesRideRunnerWithPreparedStateApp$.$anonfun$main$7(WavesRideRunnerWithPreparedStateApp.scala:56)
+	at map @ com.wavesplatform.ride.runner.entrypoints.WavesRideRunnerWithPreparedStateApp$.$anonfun$main$6(WavesRideRunnerWithPreparedStateApp.scala:58)
+	at runSyncUnsafe @ com.wavesplatform.ride.runner.entrypoints.WavesRideRunnerWithPreparedStateApp$.$anonfun$main$1(WavesRideRunnerWithPreparedStateApp.scala:70)
+]]>
+</error>
+    </testcase>
+  </testsuite>
 </testsuites>
