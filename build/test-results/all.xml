@@ -1,10 +1,10 @@
-<testsuites time="3.849">
-  <testsuite name="." time="3.849">
-    <testsuite name="simple" time="2.311">
-      <testsuite name="waves-balance" time="2.311">
-        <testcase name="" file="simple/waves-balance/waves-balance-failure.test.conf" time="1.468">
+<testsuites time="4.862">
+  <testsuite name="." time="4.862">
+    <testsuite name="simple" time="2.938">
+      <testsuite name="waves-balance" time="2.938">
+        <testcase name="" file="simple/waves-balance/waves-balance-failure.test.conf" time="1.854">
           <failure message="Expected value did not match" type="AssertionError">
-            <![CDATA[[31mfailed[0m:
+            <![CDATA[failed:
   expected:
     {
       "available" : {
@@ -45,7 +45,7 @@
     }    ]]>
           </failure>
         </testcase>
-        <testcase name="" file="simple/waves-balance/waves-balance-error.test.conf" time="0.843">
+        <testcase name="" file="simple/waves-balance/waves-balance-error.test.conf" time="1.084">
           <error 
           message="JsResultException(errors:List((/state/height,List(JsonValidationError(List(error.expected.jsnumber),List())))))" type="JsResultException">
             <![CDATA[play.api.libs.json.JsResultException: JsResultException(errors:List((/state/height,List(JsonValidationError(List(error.expected.jsnumber),List())))))
@@ -64,8 +64,8 @@
         </testcase>
       </testsuite>
     </testsuite>
-    <testcase name="" file="all-functions.test.conf" time="1.538">
-      <system-out><![CDATA[[32msucceeded[0m: "9007199361531056" ]]></system-out>
+    <testcase name="" file="all-functions.test.conf" time="1.923">
+      <system-out><![CDATA[succeeded: "9007199361531056" ]]></system-out>
     </testcase>
   </testsuite>
 </testsuites>
