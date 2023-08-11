@@ -40,9 +40,10 @@ jobs:
 
       - name: Run tests
         run: |
-          FILES=./tests/**/*.conf
-          echo "Running on ${FILES}"
-          java -jar waves-ride-runner-*.jar test -p text --printTotal --junit ./build/test-results/all.xml $FILES
+          shopt -s nullglob
+          TESTS=(./tests/**/*.conf)
+          echo "Running on ${TESTS}"
+          java -jar waves-ride-runner-*.jar test -p text --printTotal --junit ./build/test-results/all.xml $TESTS
 
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3
