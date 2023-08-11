@@ -40,6 +40,7 @@ jobs:
 
       - name: Run tests
         run: |
+          shopt -s globstar
           ls -alh ./tests/**/*.conf
           java -jar waves-ride-runner-*.jar test -p text --printTotal --junit ./build/test-results/all.xml ./tests/**/*.conf
 
