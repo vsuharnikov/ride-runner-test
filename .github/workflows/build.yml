@@ -40,8 +40,9 @@ jobs:
 
       - name: Run tests
         run: |
-          ls -al .
-          java -jar waves-ride-runner-*.jar test -p text --printTotal --junit ./build/test-results/all.xml ./tests/**/*.conf
+          FILES=./tests/**/*.conf
+          echo "Running on ${FILES}"
+          java -jar waves-ride-runner-*.jar test -p text --printTotal --junit ./build/test-results/all.xml $FILES
 
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3
